@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>• Luna Estética avançada</title>
+    <meta
+      name="description"
+      content="Botox, Preenchimento Labial, Fios PDO e Peelings. Agende sua avaliação pelo WhatsApp."
+    />
+    <link rel="stylesheet" href="index.css" />
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "860556881626309"); // Substitua pelo ID do Pixel
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=860556881626309&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap">
+        <div class="brand">
+          <div class="logo"></div>
+          <img src="imagens/LogoLuna.png" alt="Logo Luna" width="120px" />
+          <strong>LUNA ESTÉTICA AVANÇADA - RIO GRANDE</strong>
+        </div>
+        <nav>
+          <a href="#servicos" class="btn">Serviços</a>
+          <a href="#agende" class="btn primary">WhatsApp</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <h1>Resultados naturais com cuidado humano</h1>
+          <p>
+            Procedimentos seguros com avaliação personalizada e acompanhamento.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#agende">Agendar avaliação</a>
+            <a class="btn" href="#servicos">Conhecer serviços</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="services wrap">
+        <!-- BOTOX -->
+        <article class="card">
+          <header>
+            <h2>Botox (Toxina Botulínica)</h2>
+            <p>Suaviza linhas de expressão com aspecto natural.</p>
+          </header>
+          <div class="before-after single">
+            <img src="imagens/Botox.jpg" alt="Antes e Depois do botox" />
+          </div>
+          <footer>
+            <small>Reavaliação em até 15 dias quando indicado.</small>
+            <a class="cta" href="#agende">Agendar avaliação →</a>
+          </footer>
+        </article>
+
+        <!-- PREENCHIMENTO LABIAL -->
+        <article class="card">
+          <header>
+            <h2>Preenchimento Labial</h2>
+            <p>Contorno, volume e hidratação para lábios mais definidos.</p>
+          </header>
+          <div class="before-after single">
+            <img
+              src="imagens/Preen.Labial.jpg"
+              alt="Antes e Depois do preenchimento labial"
+            />
+          </div>
+          <footer>
+            <small>Ácido hialurônico. Resultado imediato.</small>
+            <a class="cta" href="#agende">Agendar avaliação →</a>
+          </footer>
+        </article>
+
+        <!-- FIOS PDO -->
+        <article class="card">
+          <header>
+            <h2>Fios PDO</h2>
+            <p>Bioestimulação de colágeno e suporte para contorno facial.</p>
+          </header>
+          <div class="before-after single">
+            <img src="imagens/Lifting.jpg" alt="Antes e Depois dos fios PDO" />
+          </div>
+          <footer>
+            <small>Efeito progressivo nas semanas seguintes.</small>
+            <a class="cta" href="#agende">Agendar avaliação →</a>
+          </footer>
+        </article>
+
+        <!-- PEELINGS -->
+        <article class="card">
+          <header>
+            <h2>Peelings</h2>
+            <p>Textura, manchas e revitalização com protocolos sob medida.</p>
+          </header>
+          <div class="before-after single">
+            <img src="assets/peelings.jpg" alt="Antes e Depois do peeling" />
+          </div>
+          <footer>
+            <small>Opções químico e enzimático; downtime variável.</small>
+            <a class="cta" href="#agende">Agendar avaliação →</a>
+          </footer>
+        </article>
+      </section>
+
+      <section id="agende" class="wrap contact">
+        <h2>Agende sua avaliação</h2>
+        <form class="form" onsubmit="return sendWA(event)">
+          <label>
+            <span>Seu nome</span>
+            <input required id="nome" placeholder="Seu nome" />
+          </label>
+          <label>
+            <span>Serviço</span>
+            <select id="servico">
+              <option>Botox</option>
+              <option>Preenchimento Labial</option>
+              <option>Fios PDO</option>
+              <option>Peelings</option>
+            </select>
+          </label>
+          <label class="full">
+            <span>Melhor dia/horário</span>
+            <input id="quando" placeholder="Ex.: próxima terça à tarde" />
+          </label>
+          <button class="btn primary" type="submit">Falar no WhatsApp</button>
+          <small class="note">Atendimento: Seg–Sex 9h–19h · Sáb 9h–18h</small>
+        </form>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <div>
+        <strong>LUNA ESTÉTICA AVANÇADA - RIO GRANDE</strong> · CNPJ:
+        [00.000.000/0000-00]
+        <div class="fine">
+          Informações educativas. Resultados variam entre indivíduos.
+        </div>
+      </div>
+      <div>
+        <a id="waLink" href="#">WhatsApp</a> · <a href="#">Instagram</a>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

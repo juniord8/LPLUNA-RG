@@ -1,0 +1,411 @@
+/* ===== Paleta viva — champagne + dourado + madeira + rosé ===== */
+:root{
+  --bg:#FAF6EF;          /* fundo iluminado */
+  --card:#FFFbf4;        /* cards clarinhos */
+  --text:#231A14;        /* marrom profundo (legibilidade) */
+  --muted:#857669;       /* cinza quente (secundário) */
+  --gold:#E0B84C;        /* dourado vivo */
+  --wood:#A97A59;        /* madeira */
+  --rose:#D08192;        /* rosé vibrante */
+  --cta:#10B981;         /* esmeralda (WhatsApp/ação) */
+  --radius:18px;
+  --shadow:0 10px 28px rgba(0,0,0,.07);
+  --max:1120px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;color:#0a6e66}
+.wrap{max-width:var(--max);margin:auto;padding:0 20px}
+
+/* ===== Fundo mais amadeirado ===== */
+html, body {
+  background:
+    radial-gradient(120px 780px at 70% 10%, rgba(224,184,76,.22), transparent 60%), /* dourado */
+    radial-gradient(950px 580px at 20% 85%, rgba(169,122,89,.28), transparent 70%), /* madeira */
+    linear-gradient(180deg, #E8D6C0 0%, #DCC1A3 100%); /* degradê amadeirado */
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Header / Nav ===== */
+.nav{
+  position:sticky; top:0; z-index:40;
+  background:rgba(250,246,239,.95);
+  backdrop-filter:saturate(150%) blur(8px);
+  border-bottom:1px solid rgba(224,184,76,.42);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{
+  width: 10px;height:34px;border-radius:12px;
+  background:linear-gradient(135deg,var(--wood),var(--gold));
+  box-shadow:var(--shadow);
+}
+/* ===== Logo com leve glow para destacar no fundo ===== */
+.logo-img {
+  height: 60px; /* ajuste conforme precisar */
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.7))
+          drop-shadow(0 0 8px rgba(255,255,255,0.4));
+}
+
+
+/* ===== Fundo do Header com imagem ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: url("imagens/FundoHeader.png") no-repeat center/cover; /* use o caminho da sua imagem */
+  border-bottom: 1px solid rgba(224,184,76,.42);
+  backdrop-filter: saturate(150%) blur(6px);
+}
+
+/* ===== Responsividade Header e Hero ===== */
+@media (max-width: 640px) {
+  /* Header */
+  .nav .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 16px;
+  }
+
+  .brand {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .brand strong {
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .logo-img {
+    height: 46px; /* reduz um pouco no mobile */
+    max-width: 46px;
+  }
+
+  .nav nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 14px;
+    flex: 1; /* botões ocupam espaço de forma igual */
+    text-align: center;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 24px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Cards */
+  .services {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .card footer .cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+
+/* ===== Tipografia ===== */
+h1{font-size:48px;line-height:1.1;margin:0 0 10px}
+h2{font-size:26px;margin:0 0 6px}
+h3{font-size:20px;margin:0 0 6px}
+p{margin:0 0 12px}
+small,.note{font-size:12px;color:var(--muted)}
+
+/* ===== Botões (CTAs) ===== */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 16px;border-radius:14px;
+  background:var(--card);
+  border:1px solid rgba(224,184,76,.36);
+  font-weight:700;
+}
+
+/* CTA dourado com efeito de luz (inspiração lustre) */
+.btn.primary{
+  position:relative;
+  color:#3b2a0b;
+  border:0;
+  background:linear-gradient(135deg, #FFD76A 0%, #E0B84C 40%, #C89A2B 100%);
+  box-shadow:0 0 20px rgba(224,184,76,.5), 0 8px 24px rgba(0,0,0,.12);
+  font-weight:800;
+  text-shadow:0 1px 2px rgba(255,255,255,.6);
+  transition:all .25s ease-in-out;
+}
+
+.btn.primary:hover{
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 0 28px rgba(224,184,76,.7), 0 10px 28px rgba(0,0,0,.18);
+}
+
+.btn.primary:focus{
+  outline:none;
+  box-shadow:0 0 0 4px rgba(224,184,76,.35);
+}
+
+/* Halo pulsante dourado */
+.btn.primary::after{
+  content:"";
+  position:absolute; inset:-6px; border-radius:18px; pointer-events:none;
+  box-shadow:0 0 0 0 rgba(224,184,76,.55);
+  animation:goldPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes goldPulse{
+  0%{box-shadow:0 0 0 0 rgba(224,184,76,.55)}
+  70%{box-shadow:0 0 0 20px rgba(224,184,76,0)}
+  100%{box-shadow:0 0 0 0 rgba(224,184,76,0)}
+}
+
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ===== Hero ===== */
+.hero{padding:72px 0 32px}
+.hero p{color:var(--muted)}
+
+/* ===== Cards (Serviços) ===== */
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:24px 20px}
+.card{
+  background:var(--card);
+  border:1px solid rgba(224,184,76,.36);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+.card header p{color:var(--muted)}
+.card footer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}
+/* ===== CTA dos CARDS — outline dourado com brilho rosé ===== */
+.card footer .cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #E0B84C 0%, #D08192 100%); /* dourado → rosé */
+  box-shadow: 
+    0 6px 18px rgba(224,184,76,.45),
+    0 8px 28px rgba(208,129,146,.35);
+  border: none;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.card footer .cta:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:
+    0 8px 22px rgba(224,184,76,.55),
+    0 10px 32px rgba(208,129,146,.45);
+}
+
+.card footer .cta::after {
+  content: "→";
+  margin-left: 6px;
+  transition: transform .2s ease;
+}
+.card footer .cta:hover::after {
+  transform: translateX(4px);
+}
+
+
+.card footer .cta:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 22px rgba(208,129,146,.25),          /* brilho rosé */
+    0 0 0 4px rgba(208,129,146,.18),            /* anel suave rosé */
+    0 2px 0 rgba(224,184,76,.25) inset;         /* mantém relevo */
+  color: #2a1f12;
+}
+
+.card footer .cta:active{
+  transform: translateY(0);
+  box-shadow:
+    0 6px 14px rgba(208,129,146,.22),
+    0 0 0 3px rgba(208,129,146,.18),
+    0 1px 0 rgba(224,184,76,.28) inset;
+}
+
+/* micro setinha animada para reforçar ação */
+.card footer .cta::after{
+  content: "→";
+  transition: transform .2s ease;
+}
+.card footer .cta:hover::after{
+  transform: translateX(3px);
+}
+
+
+/* ===== Antes/Depois ===== */
+/* Padrão atual: 2 imagens lado a lado (quando vierem separadas) */
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0 4px}
+.before-after figure{
+  border:1px solid rgba(224,184,76,.42);
+  background:#fff; border-radius:16px; padding:8px;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+.before-after figcaption{text-align:center;font-size:12px;color:var(--muted);margin-top:6px}
+.before-after img{width:100%; height:240px; object-fit:cover; border-radius:12px}
+
+/* Se o Antes/Depois vier em UMA ÚNICA IMAGEM pronta:
+   troque no HTML para: <div class="before-after single"><img ...></div> */
+.before-after.single{grid-template-columns:1fr}
+.before-after.single img{height:320px}
+.before-after.single + footer .cta{filter:drop-shadow(0 8px 18px rgba(16,185,129,.25))}
+
+/* ===== Formulário / Contato ===== */
+.contact{padding:10px 20px 44px}
+.form{
+  display:grid; grid-template-columns:1fr 1fr; gap:12px;
+  background:var(--card);
+  border:1px solid rgba(224,184,76,.36);
+  padding:16px; border-radius:var(--radius);
+}
+.form .full{grid-column:1/-1}
+.form label{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted)}
+.form input,.form select{
+  background:#fff;border:1px solid rgba(224,184,76,.34);
+  border-radius:12px;color:var(--text);padding:12px
+}
+
+/* ===== Rodapé ===== */
+.footer{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
+  padding:24px 20px;border-top:1px solid rgba(224,184,76,.38);color:var(--muted)
+}
+.fine{font-size:12px;color:var(--muted)}
+
+/* ===== CTA fixo (MOBILE) para reter lead ===== */
+@media (max-width:640px){
+  .cta-fixed{
+    position:fixed; left:16px; right:16px; bottom:16px; z-index:60;
+    display:flex; justify-content:center;
+  }
+  .cta-fixed .btn.primary{width:100%; justify-content:center; padding:14px 18px}
+  body{padding-bottom:92px;} /* evita que o CTA cubra conteúdo */
+}
+
+/* ===== Responsivo ===== */
+@media (max-width:1000px){.services{grid-template-columns:1fr}}
+@media (max-width:640px){
+  h1{font-size:36px}
+  .before-after img{height:210px}
+}
+/* ===== Responsivo aprimorado (até 768px) ===== */
+@media (max-width: 768px){
+
+  /* Header compacto */
+  .nav .wrap{
+    padding:10px 0;
+    gap:12px;
+  }
+
+  /* Hero mais enxuto */
+  .hero{padding:48px 0 20px}
+  h1{font-size:34px; line-height:1.15}
+  .hero p{font-size:15px}
+
+  /* CTAs do hero empilhados e largos */
+  .actions{flex-direction:column; gap:10px}
+  .actions .btn{width:100%; justify-content:center; padding:14px 18px}
+
+  /* Cards em 1 coluna + respiro */
+  .services{
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:16px 12px;
+  }
+  .card{
+    border-radius:16px;
+    padding:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+  }
+
+  /* Antes/Depois: 1 por linha no mobile */
+  .before-after{
+    grid-template-columns:1fr;
+    gap:10px;
+    margin:10px 0 2px;
+  }
+  .before-after img{height:200px}
+
+  /* CTA do card ocupa a largura toda */
+  .card footer{
+    align-items:stretch;
+    gap:10px;
+  }
+  .card footer .cta{
+    width:100%;
+    justify-content:center;
+    padding:14px 18px;
+  }
+
+  /* Formulário empilhado e confortável */
+  .form{
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:14px;
+  }
+  .form .full{grid-column:1}
+  .form input,.form select{padding:14px}
+
+  /* Rodapé com colunas empilhadas */
+  .footer{
+    flex-direction:column;
+    gap:12px;
+  }
+}
+
+/* ===== Extra pequeno (até 360px) — evita quebra do título ===== */
+@media (max-width: 360px){
+  h1{font-size:28px}
+  .before-after img{height:180px}
+}
+
