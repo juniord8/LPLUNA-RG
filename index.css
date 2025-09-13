@@ -281,6 +281,18 @@ small,.note{font-size:12px;color:var(--muted)}
 .card footer .cta:hover::after{
   transform: translateX(3px);
 }
+/* Subtítulo de destaque nos cards */
+.card header p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--wood); /* tom amadeirado para diferenciar */
+  margin: 6px 0 12px;
+  line-height: 1.4;
+  text-align: left;
+  background: linear-gradient(90deg, rgba(224,184,76,.15), transparent 80%);
+  padding: 4px 6px;
+  border-radius: 6px;
+}
 
 
 /* ===== Antes/Depois ===== */
