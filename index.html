@@ -1,185 +1,467 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>• Luna Estética avançada</title>
+    <meta name="theme-color" content="#f8f1e5" />
     <meta
       name="description"
-      content="Botox, Preenchimento Labial, Fios PDO e Peelings. Agende sua avaliação pelo WhatsApp."
+      content="Estética avançada em Rio Grande, RS. Atendimento individual para cuidados faciais, toxina botulínica, preenchimento, bioestimuladores e skinbooster."
     />
-    <link rel="stylesheet" href="index.css" />
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "860556881626309"); // Substitua pelo ID do Pixel
-      fbq("track", "PageView");
-    </script>
+    <title>Luna Estética Avançada | Rio Grande</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
     <noscript>
       <img
+        class="pixel-fallback"
         height="1"
         width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=860556881626309&ev=PageView&noscript=1"
+        alt=""
+        src="https://www.facebook.com/tr?id=1626871032781530&ev=PageView&noscript=1"
       />
     </noscript>
-    <!-- End Meta Pixel Code -->
-  </head>
-  <body>
-    <header class="nav">
-      <div class="wrap">
-        <div class="brand">
-          <div class="logo"></div>
-          <img src="imagens/LogoLuna.png" alt="Logo Luna" width="120px" />
-          <strong>LUNA ESTÉTICA AVANÇADA - RIO GRANDE</strong>
-        </div>
-        <nav>
-          <a href="#servicos" class="btn">Serviços</a>
-          <a href="#agende" class="btn primary">WhatsApp</a>
+
+    <header class="site-header" id="inicio">
+      <div class="container header-content">
+        <a class="brand" href="#inicio" aria-label="Luna Estética Avançada">
+          <img src="imagens/LogoLuna.png" alt="" />
+          <span>
+            <strong>Luna Estética Avançada</strong>
+            <small>Rio Grande</small>
+          </span>
+        </a>
+
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+          <a href="#beneficios">Benefícios</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#seguranca">Sobre</a>
+          <a class="button button-brown button-small" href="#avaliacao">
+            Agendar avaliação
+          </a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="wrap">
-          <h1>Atendimento exclusivo, segurança total e resultados que superam expectativas </h1>
-          <p>
-            - Agende sua avaliação e conheça o procedimento ideal para o seu perfi.
-          </p>
-          <div class="actions">
-            <a class="btn primary" href="#agende">Agendar avaliação</a>
-            <a class="btn" href="#servicos">Conhecer serviços</a>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="section-label">Estética avançada em Rio Grande</span>
+            <h1 id="hero-title">Cuidado facial que respeita a sua identidade</h1>
+            <p>
+              Um atendimento atento aos detalhes, com escolhas feitas em
+              conjunto e um plano pensado para as necessidades da sua pele e do
+              seu rosto.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button button-whatsapp"
+                href="#"
+                data-whatsapp
+                data-message="Olá! Gostaria de saber mais sobre a avaliação na Luna Estética Avançada."
+              >
+                <span class="whatsapp-icon" aria-hidden="true">✓</span>
+                Saiba mais no WhatsApp
+              </a>
+              <a class="button button-outline" href="#servicos">
+                Conhecer os serviços
+              </a>
+            </div>
+
+            <ul class="hero-highlights" aria-label="Diferenciais">
+              <li>Avaliação individual</li>
+              <li>Orientação clara</li>
+              <li>Atendimento em Rio Grande</li>
+            </ul>
+          </div>
+
+          <div class="hero-card reveal" aria-label="Luna Estética Avançada">
+            <div class="hero-card-inner">
+              <img src="imagens/LogoLuna.png" alt="Luna Estética Avançada" />
+              <p>Beleza, cuidado e escolhas conscientes.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="servicos" class="services wrap">
-        <!-- BOTOX -->
-        <article class="card">
-          <header>
-            <h2>Botox (Toxina Botulínica)</h2>
-            <p>Cada aplicação é planejada como um projeto único, respeitando proporções e sutilezas que mantêm sua expressão autêntica.</p>
-          </header>
-          <div class="before-after single">
-            <img src="imagens/Botox.jpg" alt="Antes e Depois do botox" />
+      <section class="benefits section" id="beneficios">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-label">Por que cuidar de você</span>
+            <h2>Procedimentos escolhidos com propósito</h2>
+            <p>
+              A avaliação ajuda a entender prioridades e a selecionar cuidados
+              adequados para cada momento.
+            </p>
           </div>
-          <footer>
-            <small>Reavaliação em até 15 dias quando indicado.</small>
-            <a class="cta" href="#agende">Agendar avaliação →</a>
-          </footer>
-        </article>
 
-        <!-- PREENCHIMENTO LABIAL -->
-        <article class="card">
-          <header>
-            <h2>Preenchimento Labial</h2>
-            <p> Cada aplicação é guiada por um método exclusivo que combina estudo facial e execução precisa, resultando em lábios proporcionais, naturais e cheios de identidade..</p>
-          </header>
-          <div class="before-after single">
-            <img
-              src="imagens/Preen.Labial.jpg"
-              alt="Antes e Depois do preenchimento labial"
-            />
-          </div>
-          <footer>
-            <small>Ácido hialurônico. Resultado imediato.</small>
-            <a class="cta" href="#agende">Agendar avaliação →</a>
-          </footer>
-        </article>
+          <div class="benefit-grid">
+            <article class="benefit-card reveal">
+              <span class="benefit-icon" aria-hidden="true">01</span>
+              <h3>Traços preservados</h3>
+              <p>
+                As escolhas consideram suas características e o que faz sentido
+                para você.
+              </p>
+            </article>
 
-        <!-- FIOS PDO -->
-        <article class="card">
-          <header>
-            <h2>Fios PDO</h2>
-            <p>Para quem sente que o rosto perdeu firmeza e definição, nosso método une análise facial e técnica milimétrica para reposicionar tecidos, redefinir contornos e estimular colágeno — tudo preservando a naturalidade dos movimentos.</p>
-          </header>
-          <div class="before-after single">
-            <img src="imagens/Lifting.jpg" alt="Antes e Depois dos fios PDO" />
-          </div>
-          <footer>
-            <small>Efeito progressivo nas semanas seguintes.</small>
-            <a class="cta" href="#agende">Agendar avaliação →</a>
-          </footer>
-        </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-icon" aria-hidden="true">02</span>
+              <h3>Plano individual</h3>
+              <p>
+                Cada indicação parte de uma conversa e de uma avaliação
+                cuidadosa.
+              </p>
+            </article>
 
-        <!-- PEELINGS -->
-        <article class="card">
-          <header>
-            <h2>Peelings</h2>
-            <p>Textura, manchas e revitalização com protocolos sob medida.</p>
-          </header>
-          <div class="before-after single">
-            <img src="assets/peelings.jpg" alt="Antes e Depois do peeling" />
+            <article class="benefit-card reveal">
+              <span class="benefit-icon" aria-hidden="true">03</span>
+              <h3>Decisões bem informadas</h3>
+              <p>
+                Você recebe explicações sobre possibilidades, cuidados e
+                limitações.
+              </p>
+            </article>
           </div>
-          <footer>
-            <small>Opções químico e enzimático; downtime variável.</small>
-            <a class="cta" href="#agende">Agendar avaliação →</a>
-          </footer>
-        </article>
+        </div>
       </section>
 
-      <section id="agende" class="wrap contact">
-        <h2>Agende sua avaliação</h2>
-        <form class="form" onsubmit="return sendWA(event)">
-          <label>
-            <span>Seu nome</span>
-            <input required id="nome" placeholder="Seu nome" />
-          </label>
-          <label>
-            <span>Serviço</span>
-            <select id="servico">
-              <option>Botox</option>
-              <option>Preenchimento Labial</option>
-              <option>Fios PDO</option>
-              <option>Peelings</option>
-            </select>
-          </label>
-          <label class="full">
-            <span>Melhor dia/horário</span>
-            <input id="quando" placeholder="Ex.: próxima terça à tarde" />
-          </label>
-          <button class="btn primary" type="submit">Falar no WhatsApp</button>
-          <small class="note">Atendimento: Seg–Sex 9h–19h · Sáb 9h–18h</small>
-        </form>
+      <section class="services section" id="servicos">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-label">Serviços</span>
+            <h2>Cuidados faciais para diferentes necessidades</h2>
+            <p>
+              Conheça as opções disponíveis. A indicação adequada é definida
+              somente após avaliação individual.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card service-card-featured reveal">
+              <div class="service-image">
+                <img
+                  src="imagens/Botox.jpg"
+                  alt="Registro de atendimento com toxina botulínica"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-content">
+                <span>Expressão facial</span>
+                <h3>Toxina botulínica</h3>
+                <p>
+                  Utilizada em planos de cuidado voltados às linhas de
+                  expressão, sempre com avaliação prévia.
+                </p>
+                <a href="#avaliacao" data-select-service="Toxina botulínica">
+                  Tenho interesse <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card service-card-featured reveal">
+              <div class="service-image">
+                <img
+                  src="imagens/Preen.Labial.jpg"
+                  alt="Registro de atendimento com preenchimento"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-content">
+                <span>Equilíbrio e proporção</span>
+                <h3>Preenchimento facial</h3>
+                <p>
+                  Planejado de acordo com a anatomia e os objetivos conversados
+                  durante a avaliação.
+                </p>
+                <a href="#avaliacao" data-select-service="Preenchimento facial">
+                  Tenho interesse <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card service-card-featured reveal">
+              <div class="service-image">
+                <img
+                  src="imagens/Lifting.jpg"
+                  alt="Registro de cuidado facial personalizado"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-content">
+                <span>Qualidade da pele</span>
+                <h3>Bioestimuladores</h3>
+                <p>
+                  Podem fazer parte de protocolos voltados ao cuidado gradual
+                  da pele, conforme indicação profissional.
+                </p>
+                <a href="#avaliacao" data-select-service="Bioestimuladores">
+                  Tenho interesse <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-symbol" aria-hidden="true">S</div>
+              <div class="service-content">
+                <span>Hidratação</span>
+                <h3>Skinbooster</h3>
+                <p>
+                  Opção de cuidado injetável avaliada conforme as condições e
+                  necessidades da pele.
+                </p>
+                <a href="#avaliacao" data-select-service="Skinbooster">
+                  Tenho interesse <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-symbol" aria-hidden="true">L</div>
+              <div class="service-content">
+                <span>Cuidado essencial</span>
+                <h3>Limpeza de pele</h3>
+                <p>
+                  Atendimento realizado de acordo com o tipo de pele e suas
+                  necessidades no momento.
+                </p>
+                <a href="#avaliacao" data-select-service="Limpeza de pele">
+                  Tenho interesse <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-symbol" aria-hidden="true">P</div>
+              <div class="service-content">
+                <span>Cuidado combinado</span>
+                <h3>Protocolos personalizados</h3>
+                <p>
+                  Combinações organizadas após avaliação, respeitando
+                  prioridades, rotina e características individuais.
+                </p>
+                <a
+                  href="#avaliacao"
+                  data-select-service="Protocolos faciais personalizados"
+                >
+                  Tenho interesse <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="authority section" id="seguranca">
+        <div class="container authority-grid">
+          <div class="authority-copy reveal">
+            <span class="section-label">Confiança em cada etapa</span>
+            <h2>Você participa de todas as decisões</h2>
+            <p>
+              Antes de qualquer procedimento, conversamos sobre o que você
+              busca, avaliamos as possibilidades e explicamos os cuidados
+              envolvidos.
+            </p>
+
+            <ul class="check-list">
+              <li>Avaliação antes da definição do plano</li>
+              <li>Explicação sobre cuidados e particularidades</li>
+              <li>Conduta individualizada e acompanhamento</li>
+              <li>Ambiente preparado para receber você</li>
+            </ul>
+          </div>
+
+          <aside class="authority-panel reveal">
+            <span class="panel-mark">L</span>
+            <blockquote>
+              “Cuidar também é ouvir, orientar e respeitar o tempo de cada
+              pessoa.”
+            </blockquote>
+            <p>Luna Estética Avançada</p>
+            <small>Rio Grande, RS</small>
+          </aside>
+        </div>
+      </section>
+
+      <section class="testimonials section" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-label">Experiências na Luna</span>
+            <h2 id="testimonials-title">Acolhimento que faz diferença</h2>
+            <p>
+              O cuidado com a comunicação e com cada etapa também faz parte do
+              atendimento.
+            </p>
+          </div>
+
+          <!-- Substitua pelos depoimentos reais e autorizados da clínica. -->
+          <div class="testimonial-grid">
+            <article class="testimonial-card reveal">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote>
+                “Fui recebida com muita atenção e consegui esclarecer minhas
+                dúvidas antes de decidir.”
+              </blockquote>
+              <p>Cliente Luna</p>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote>
+                “Gostei da forma clara como cada possibilidade foi explicada
+                durante a avaliação.”
+              </blockquote>
+              <p>Cliente Luna</p>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote>
+                “O ambiente é acolhedor e o atendimento transmite cuidado em
+                todos os detalhes.”
+              </blockquote>
+              <p>Cliente Luna</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="evaluation section" id="avaliacao">
+        <div class="container evaluation-grid">
+          <div class="evaluation-copy reveal">
+            <span class="section-label">Avaliação individual</span>
+            <h2>Vamos conversar sobre o cuidado ideal para você?</h2>
+            <p>
+              Preencha os campos para preparar sua mensagem. Você poderá revisar
+              tudo no WhatsApp antes de enviar.
+            </p>
+
+            <div class="contact-details">
+              <div>
+                <strong>Localização</strong>
+                <span>Rio Grande, RS</span>
+              </div>
+              <div>
+                <strong>Atendimento</strong>
+                <span>Com horário agendado</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="lead-form reveal" id="lead-form">
+            <div class="field">
+              <label for="name">Seu nome</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Como podemos chamar você?"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="service">Serviço de interesse</label>
+              <select id="service" name="service" required>
+                <option value="">Selecione uma opção</option>
+                <option>Toxina botulínica</option>
+                <option>Preenchimento facial</option>
+                <option>Bioestimuladores</option>
+                <option>Skinbooster</option>
+                <option>Limpeza de pele</option>
+                <option>Protocolos faciais personalizados</option>
+                <option>Ainda não sei</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="availability">Melhor dia ou período</label>
+              <input
+                id="availability"
+                name="availability"
+                type="text"
+                placeholder="Ex.: terça-feira à tarde"
+              />
+            </div>
+
+            <button class="button button-whatsapp form-submit" type="submit">
+              Saiba mais no WhatsApp
+            </button>
+            <small>
+              O WhatsApp será aberto com a mensagem pronta. O envio só acontece
+              após a sua confirmação.
+            </small>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer class="wrap footer">
-      <div>
-        <strong>LUNA ESTÉTICA AVANÇADA - RIO GRANDE</strong> · CNPJ:
-        [00.000.000/0000-00]
-        <div class="fine">
-          Informações educativas. Resultados variam entre indivíduos.
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="imagens/LogoLuna.png" alt="" />
+          <div>
+            <strong>Luna Estética Avançada</strong>
+            <span>Rio Grande, RS</span>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <strong>Contato</strong>
+          <a href="#" data-whatsapp>WhatsApp</a>
+          <a href="#" data-instagram target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <strong>Endereço</strong>
+          <span>Rio Grande, RS</span>
+          <span>Consulte a localização no agendamento</span>
         </div>
       </div>
-      <div>
-        <a id="waLink" href="#">WhatsApp</a> · <a href="#">Instagram</a>
+
+      <div class="container footer-bottom">
+        <p>
+          Todo procedimento depende de avaliação individual. As respostas podem
+          variar conforme as características de cada pessoa.
+        </p>
+        <a href="#inicio">Voltar ao início ↑</a>
       </div>
     </footer>
 
-    <script src="index.js"></script>
+    <a
+      class="floating-whatsapp"
+      href="#"
+      data-whatsapp
+      data-message="Olá! Gostaria de saber mais sobre os serviços da Luna Estética Avançada."
+      aria-label="Falar com a Luna Estética Avançada pelo WhatsApp"
+    >
+      <span aria-hidden="true">✓</span>
+      <strong>WhatsApp</strong>
+    </a>
   </body>
 </html>
