@@ -481,14 +481,14 @@ h3 {
 
 .service-image {
   overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: var(--cream-200);
+  aspect-ratio: 1 / 1;
+  background: #f8f4ed;
 }
 
 .service-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 400ms ease;
 }
 
@@ -1102,7 +1102,7 @@ h3 {
   }
 
   .service-image {
-    aspect-ratio: 5 / 4;
+    aspect-ratio: 1 / 1;
   }
 
   .authority-panel,
